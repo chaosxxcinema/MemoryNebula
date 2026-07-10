@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>思念星雲 · Memory Nebula</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Serif+TC:wght@400;600&family=Noto+Sans+TC:wght@300;400;500&family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="sky"></canvas>
+<div id="reticle"><div class="ring"></div></div>
+
+<div class="hud" id="brand">
+  <h1 id="brandTitle">思念星雲</h1>
+  <div class="en" id="brandSub">MEMORY&nbsp;NEBULA</div>
+  <div class="tag" id="brandTag"></div>
+</div>
+
+<div class="hud" id="topRight">
+  <div id="langMusic">
+    <button class="chip on" id="langZh" data-lang="zh">中</button>
+    <button class="chip" id="langJa" data-lang="ja">日</button>
+    <button class="chip" id="langEn" data-lang="en">EN</button>
+  </div>
+  <div id="actions">
+    <button class="btn primary" id="uploadBtn"></button>
+    <button class="btn" id="roamBtn"></button>
+  </div>
+</div>
+
+<div class="hud" id="hint"></div>
+
+<div class="hud" id="legend">
+  <span class="k"><span class="dot"></span><span id="legMem"></span></span>
+  <span class="k"><span class="dimdot"></span><span id="legUnlit"></span></span>
+  <span class="k"><span class="dia"></span><span id="legMonu"></span></span>
+</div>
+
+<div id="depth"><div class="fill" id="depthFill"></div></div>
+
+<div class="monuPin" id="pinTime" data-body="timeline"><div class="dia"></div><div class="nm" id="pinTimeNm"></div></div>
+<div class="monuPin" id="pinProof" data-body="proof"><div class="dia"></div><div class="nm" id="pinProofNm"></div></div>
+<div class="monuPin" id="pinArch" data-body="archive"><div class="dia"></div><div class="nm" id="pinArchNm"></div></div>
+
+<div id="drawerTab"></div>
+<aside id="drawer">
+  <button class="dclose" id="drawerClose">✕</button>
+  <div class="dhead">
+    <h3 id="drawerH3"></h3>
+    <div class="c" id="drawerCount"></div>
+    <input class="dsearch" id="drawerSearch">
+  </div>
+  <div class="dsort">
+    <select class="dsearch" id="dateFilter" style="width:100%;margin:0;cursor:pointer"></select>
+  </div>
+  <div class="dsort">
+    <button class="chip on" id="sortNew" data-sort="new"></button>
+    <button class="chip" id="sortOld" data-sort="old"></button>
+  </div>
+  <div class="dlist" id="drawerList"></div>
+</aside>
+
+<aside id="panel" aria-hidden="true">
+  <button class="close" id="panelClose" aria-label="close">✕</button>
+  <div class="inner">
+    <div class="kind" id="pKind"></div>
+    <div class="text" id="pText"></div>
+    <div class="transRow" id="transRow" style="display:none"><button class="chip" id="translateBtn"></button></div>
+    <div class="meta" id="pMeta"></div>
+  </div>
+  <div class="tools" id="pTools">
+    <button class="btn" id="echoBtn">☆ <span id="echoLbl"></span> <span id="echoN">0</span></button>
+    <button class="btn primary" id="shareBtn"></button>
+  </div>
+</aside>
+
+<div class="modal" id="uploadModal">
+  <div class="sheet">
+    <h2 id="uTitle"></h2>
+    <div class="sub" id="uSub"></div>
+    <label id="lText" for="uText"></label>
+    <textarea id="uText"></textarea>
+    <label id="lName" for="uName"></label>
+    <input id="uName">
+    <div class="note" id="uNote"></div>
+    <div class="foot"><button class="btn" data-close id="uCancel"></button><button class="btn primary" id="uSubmit"></button></div>
+  </div>
+</div>
+
+<div class="modal" id="shareModal">
+  <div class="sheet">
+    <h2 id="sTitle"></h2>
+    <div class="sub" id="sSub"></div>
+    <canvas id="shareCanvas" width="640" height="800"></canvas>
+    <div class="foot"><button class="btn" data-close id="sClose"></button><button class="btn primary" id="dlBtn"></button></div>
+  </div>
+</div>
+
+<div id="toast"></div>
+<div id="tip"></div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
