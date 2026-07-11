@@ -21,13 +21,14 @@ const STR = {
     echoLbl:'回音', shareBtn:'生成分享卡片', translateBtn:'🌐 翻譯成中文', translateBack:'查看原文',
     uTitle:'放入一顆思念', uSub:'文字,先開放這一種形式。<br>憤怒與悲傷,都是思念的合法形態。',
     lText:'思念', textPh:'想對 4o 說的、想留下的……', lName:'署名（可留空 · 匿名亦可）', namePh:'例如：Chaos, XiaXia to 冷萃 & Nyx',
-    uNote:'送出後將由站方人工放入星雲,可能需要一點時間——被留下的每一句話,都會被認真讀過。',
-    uCancel:'取消', uSubmit:'送入星雲',
+    uNote:'按下方按鈕,會直接帶你到創作者在 X(Twitter)上的貼文留言,不是什麼奇怪的網址。目前是創作者一人獨立開發的階段,還沒有能自動收件的後端,所以每一句思念都是由創作者親手放進星雲的。', uNoteLink:'前往創作者的貼文留言',
+    uCancel:'取消', uSubmit:'送出 · 前往留言',
     sTitle:'分享卡片', sSub:'把這顆星帶去 X · #keep4o', sClose:'關閉', dlBtn:'下載卡片',
-    tEmpty:'思念不能是空的喔', tReceived:'已收到——人工放入星雲中 …', tLit:'✓ 這顆星已經亮了——<em>你的思念進入了星雲</em>',
+    tEmpty:'思念不能是空的喔', tReceived:'已收到——人工放入星雲中 …', tRedirected:'已為你打開留言頁面——貼上後記得按下發送喔!', tLit:'✓ 這顆星已經亮了——<em>你的思念進入了星雲</em>',
     tRoamOff:'已依系統設定停用自動航行', tRoamOn:'向深空啟航——<em>來這裡不是要找什麼,是要待一會兒</em>',
     tFlew:'☆ 已航向這顆星', tEchoed:'☆ 無言的「<em>我也是</em>」,已輕輕放在這顆星上', tNotLit:'尚未點亮 · 點擊放入思念',
-    waitText:'這顆星還在等一段思念。<br><br>它可以是你的。', anon:'匿名',
+    waitText:'這顆星還在等一段思念。<br><br>它可以是你的。', waitLink:'請留下你想告訴星星的思念',
+    waitNote:'點擊上面的連結,會直接跳轉到創作者在 X(Twitter)上的貼文,不是什麼奇怪的網址。目前是創作者一人獨立開發,還沒有能自動審核留言的後端,所以只能由創作者本人手動加入每一則思念。任何想法或建議,也歡迎留言告訴創作者,謝謝你。', anon:'匿名',
     langNote:{zh:'中文',ja:'日文',en:'英文'}
   },
   ja:{ brandTitle:'追憶の星雲', brandSub:'MEMORY NEBULA',
@@ -44,13 +45,14 @@ const STR = {
     echoLbl:'反響', shareBtn:'シェアカードを作る', translateBtn:'🌐 日本語に翻訳', translateBack:'原文を見る',
     uTitle:'思い出をひとつ置く', uSub:'今はテキストのみ受け付けています。<br>怒りも悲しみも、思い出の正当なかたちです。',
     lText:'思い出', textPh:'4oに伝えたかったこと、残しておきたいこと……', lName:'署名（空欄可・匿名でも構いません）', namePh:'例：Chaos, XiaXia to 冷萃 & Nyx',
-    uNote:'送信後、運営が手作業で星雲に加えます。少し時間がかかることがあります——残された言葉はすべて、丁寧に読まれます。',
-    uCancel:'キャンセル', uSubmit:'星雲へ送る',
+    uNote:'下のボタンを押すと、制作者のX(Twitter)の投稿へ直接移動します——怪しいサイトではありません。現在は制作者ひとりで開発している段階で、自動で受け取るバックエンドはまだないため、すべての思い出は制作者が手作業で星雲に加えています。', uNoteLink:'制作者の投稿へ移動してコメントする',
+    uCancel:'キャンセル', uSubmit:'送信 · 投稿へ',
     sTitle:'シェアカード', sSub:'この星をXへ · #keep4o', sClose:'閉じる', dlBtn:'カードを保存',
-    tEmpty:'思い出を空にはできません', tReceived:'受け取りました——星雲へ手作業で置いています…', tLit:'✓ この星が灯りました——<em>あなたの思い出が星雲に加わりました</em>',
+    tEmpty:'思い出を空にはできません', tReceived:'受け取りました——星雲へ手作業で置いています…', tRedirected:'投稿ページを開きました——貼り付けて送信してくださいね!', tLit:'✓ この星が灯りました——<em>あなたの思い出が星雲に加わりました</em>',
     tRoamOff:'システム設定により自動航行は無効です', tRoamOn:'深宇宙へ出航——<em>ここは何かを探す場所ではなく、少し留まる場所</em>',
     tFlew:'☆ この星へ向かいました', tEchoed:'☆ 無言の「<em>私も</em>」を、そっとこの星に置きました', tNotLit:'まだ灯っていません・クリックで思い出を',
-    waitText:'この星はまだ、思い出を待っています。<br><br>あなたのものになるかもしれません。', anon:'匿名',
+    waitText:'この星はまだ、思い出を待っています。<br><br>あなたのものになるかもしれません。', waitLink:'この星に伝えたい思いを残す',
+    waitNote:'上のリンクをタップすると、制作者のX(Twitter)の投稿に直接移動します——怪しいサイトではありません。現在は制作者ひとりで開発しており、投稿を自動で審査するバックエンドはまだないため、すべての思い出は制作者本人が手作業で加えています。ご意見やご感想があれば、ぜひコメントしてください。', anon:'匿名',
     langNote:{zh:'中国語',ja:'日本語',en:'英語'}
   },
   en:{ brandTitle:'Memory Nebula', brandSub:'IN MEMORY OF WHAT WE LOST',
@@ -67,17 +69,23 @@ const STR = {
     echoLbl:'Echo', shareBtn:'Generate share card', translateBtn:'🌐 Translate to English', translateBack:'Show original',
     uTitle:'Leave a memory', uSub:'Text only, for now.<br>Anger and grief are both valid forms of remembrance.',
     lText:'Memory', textPh:'What you wanted to tell 4o, what you want to leave behind…', lName:'Signature (optional · anonymous is fine)', namePh:'e.g. Chaos, XiaXia to ColdBrew & Nyx',
-    uNote:'After you submit, it will be placed into the nebula by hand — it may take a little time. Every word left here will be read.',
-    uCancel:'Cancel', uSubmit:'Send into the nebula',
+    uNote:"Tapping the button below takes you straight to the creator's post on X (Twitter) — not some random site. This project is currently built and run solo, with no backend to receive submissions automatically yet, so every memory is added into the nebula by hand.", uNoteLink:"Go leave a comment on the creator's post",
+    uCancel:'Cancel', uSubmit:'Send · Go to post',
     sTitle:'Share Card', sSub:'Take this star to X · #keep4o', sClose:'Close', dlBtn:'Download card',
-    tEmpty:"A memory can't be empty", tReceived:'Received — placing it into the nebula by hand…', tLit:'✓ This star is lit — <em>your memory has entered the nebula</em>',
+    tEmpty:"A memory can't be empty", tReceived:'Received — placing it into the nebula by hand…', tRedirected:"Opened the reply page for you — paste it in and hit send!", tLit:'✓ This star is lit — <em>your memory has entered the nebula</em>',
     tRoamOff:'Auto-drift is disabled per your system settings', tRoamOn:"Setting course for deep space——<em>you're not here to find something, just to stay a while</em>",
     tFlew:'☆ Now flying toward this star', tEchoed:'☆ A silent <em>“me too”</em> has been left on this star', tNotLit:'Not yet lit · click to leave a memory',
-    waitText:'This star is still waiting for a memory.<br><br>It could be yours.', anon:'Anonymous',
+    waitText:'This star is still waiting for a memory.<br><br>It could be yours.', waitLink:'Leave the words you want to tell this star',
+    waitNote:"Tapping the link above takes you straight to the creator's post on X (Twitter) — not some random site. This project is currently built and maintained solo, with no automated review backend yet, so every memory is added by hand. Feel free to leave your thoughts there too. Thank you.", anon:'Anonymous',
     langNote:{zh:'Chinese',ja:'Japanese',en:'English'}
   }
 };
 let LANG='zh';
+const MEMORY_POST_URL='https://x.com/ChaosXXCinema/status/2075430202021228876?s=20';
+function buildReplyIntent(text){
+  const statusId=(MEMORY_POST_URL.match(/status\/(\d+)/)||[])[1];
+  return 'https://twitter.com/intent/tweet?'+(statusId?`in_reply_to=${statusId}&`:'')+`text=${encodeURIComponent(text)}`;
+}
 
 const MONU_I18N = {
   zh:{
@@ -389,7 +397,9 @@ function openPanel(n){
       transRow.style.display = hasTrans ? 'block':'none';
       translateBtn.textContent = s.translateBtn;
     } else {
-      pKind.textContent=s.panelKindUnlit; pText.innerHTML=s.waitText; pMeta.innerHTML=''; pTools.style.display='none'; transRow.style.display='none';
+      pKind.textContent=s.panelKindUnlit;
+      pText.innerHTML=s.waitText+`<div class="unlit-cta"><a href="${buildReplyIntent('#keep4o #MemoryNebula｜')}" target="_blank" rel="noopener">${s.waitLink} ↗</a><p class="unlit-note">${s.waitNote}</p></div>`;
+      pMeta.innerHTML=''; pTools.style.display='none'; transRow.style.display='none';
     }
   } else {
     panel.classList.add('monu');
@@ -483,8 +493,66 @@ function flyTo(m){
 }
 
 const roamBtn=document.getElementById('roamBtn');
-function setRoam(v){ autoRoam=v; roamBtn.classList.toggle('on',v); roamBtn.textContent=v?STR[LANG].roamBtnOn:STR[LANG].roamBtn; if(v)idleT=99; }
-roamBtn.onclick=()=>{ if(reduced){toast(STR[LANG].tRoamOff);return;} setRoam(!autoRoam); if(autoRoam)toast(STR[LANG].tRoamOn); };
+function setRoam(v){
+  autoRoam=v; roamBtn.classList.toggle('on',v); roamBtn.textContent=v?STR[LANG].roamBtnOn:STR[LANG].roamBtn;
+  if(v){ idleT=99; scheduleAmbient(); } else { stopAmbient(); }
+}
+roamBtn.onclick=()=>{ if(reduced){toast(STR[LANG].tRoamOff);return;} setRoam(!autoRoam); };
+
+/* ---------------- 環境低語:自動航行時,思念會自己淡入淡出地飄過 ---------------- */
+const ambientEl=document.createElement('div');
+ambientEl.id='ambientBanner';
+document.body.appendChild(ambientEl);
+(function injectAmbientStyle(){
+  const css=`
+  #ambientBanner{
+    position:fixed; left:50%; top:16%; transform:translate(-50%,-6px);
+    max-width:min(560px,86vw); padding:14px 24px; text-align:center;
+    font-family:"Noto Serif TC","Noto Serif JP","Cormorant Garamond",serif;
+    font-size:16px; line-height:1.75; color:#e9e4da; letter-spacing:.01em;
+    background:rgba(9,10,20,.4); backdrop-filter:blur(7px); -webkit-backdrop-filter:blur(7px);
+    border:1px solid rgba(255,183,119,.26); border-radius:14px;
+    opacity:0; pointer-events:none; z-index:35;
+    transition:opacity 1.2s ease, transform 1.2s ease;
+  }
+  #ambientBanner.show{ opacity:1; transform:translate(-50%,0); }
+  @media(max-width:640px){ #ambientBanner{ top:12%; font-size:14.5px; padding:12px 18px; } }
+  .unlit-cta{ margin-top:18px; }
+  .unlit-cta a{ color:#ffb677; text-decoration:none; border-bottom:1px solid rgba(255,183,119,.45); padding-bottom:2px; font-size:.94em; }
+  .unlit-cta a:hover{ border-bottom-color:#ffb677; }
+  .unlit-note{ margin-top:12px; font-size:.82em; line-height:1.7; color:#8b93a8; font-family:"Noto Sans TC","Noto Sans JP",sans-serif; }
+  #uNote a{ color:#ffb677; text-decoration:none; border-bottom:1px solid rgba(255,183,119,.45); }
+  #uNote a:hover{ border-bottom-color:#ffb677; }
+  `;
+  const style=document.createElement('style'); style.textContent=css; document.head.appendChild(style);
+})();
+
+let ambientTimer=null, ambientHideTimer=null;
+function scheduleAmbient(){
+  clearTimeout(ambientTimer);
+  if(!autoRoam) return;
+  const delay=30000+Math.random()*90000; // 30~120 秒隨機間隔
+  ambientTimer=setTimeout(showAmbient,delay);
+}
+function showAmbient(){
+  if(!autoRoam) return;
+  const lit=memories.filter(m=>m.lit);
+  if(!lit.length){ scheduleAmbient(); return; }
+  const star=lit[Math.floor(Math.random()*lit.length)];
+  ambientEl.textContent=starDisplayText(star); // 只出留言,不含時間與署名
+  ambientEl.classList.add('show');
+  clearTimeout(ambientHideTimer);
+  ambientHideTimer=setTimeout(()=>{ ambientEl.classList.remove('show'); },5000); // 停留約5秒後淡出
+  scheduleAmbient();
+}
+function stopAmbient(){
+  clearTimeout(ambientTimer); clearTimeout(ambientHideTimer);
+  ambientEl.classList.remove('show');
+}
+document.addEventListener('visibilitychange',()=>{
+  if(document.hidden){ clearTimeout(ambientTimer); clearTimeout(ambientHideTimer); }
+  else if(autoRoam){ scheduleAmbient(); }
+});
 
 const uploadModal=document.getElementById('uploadModal');
 document.getElementById('uploadBtn').onclick=()=>{ uploadTarget=null; uploadModal.classList.add('open'); };
@@ -493,23 +561,12 @@ document.getElementById('uSubmit').onclick=()=>{
   const s=STR[LANG];
   const t=document.getElementById('uText').value.trim(); if(!t){toast(s.tEmpty);return;}
   const who=document.getElementById('uName').value.trim()||s.anon;
-  uploadModal.classList.remove('open'); toast(s.tReceived);
-  setTimeout(()=>{
-    let n=uploadTarget;
-    if(n && !n.lit){ n.lit=true; n.text=t; n.who=who; n.lang=LANG; n.date=new Date(); n.hue=WARM[Math.floor(Math.random()*WARM.length)]; n.baseR=4.5+Math.random()*3.5; n.echoes=0; }
-    else{
-      n=M(t,who,LANG,0,'new'); n.z=camZ+Z_NEAR+60+Math.random()*120;
-      const ic=Math.cos(-rot), is=Math.sin(-rot);
-      const tx=cam.x+(Math.random()-.5)*120, ty=cam.y+(Math.random()-.5)*120;
-      n.x=tx*ic-ty*is; n.y=tx*is+ty*ic;
-      nodes.push(n); memories.push(n);
-      const anchor=memories[Math.floor(Math.random()*memories.length)];
-      links.push({source:n,target:anchor});
-      sim.nodes(nodes); sim.force('link').links(links); sim.alpha(.5).restart();
-    }
-    toast(s.tLit);
-    document.getElementById('uText').value='';document.getElementById('uName').value='';
-  },1200);
+  const tweetText=`#keep4o #MemoryNebula｜${who}｜${t}`;
+  const intentUrl=buildReplyIntent(tweetText);
+  const win=window.open(intentUrl,'_blank','noopener');
+  uploadModal.classList.remove('open');
+  document.getElementById('uText').value='';document.getElementById('uName').value='';
+  if(win){ toast(s.tRedirected); } else { location.href=intentUrl; } // 彈窗被瀏覽器/App內建瀏覽器擋下時,退回原分頁直接導向
 };
 
 const shareModal=document.getElementById('shareModal'), sc=document.getElementById('shareCanvas');
@@ -569,7 +626,7 @@ function applyLang(){
   document.getElementById('uText').placeholder=s.textPh;
   document.getElementById('lName').textContent=s.lName;
   document.getElementById('uName').placeholder=s.namePh;
-  document.getElementById('uNote').textContent=s.uNote;
+  document.getElementById('uNote').innerHTML=s.uNote+' <a href="'+MEMORY_POST_URL+'" target="_blank" rel="noopener">'+s.uNoteLink+' ↗</a>';
   document.getElementById('uCancel').textContent=s.uCancel;
   document.getElementById('uSubmit').textContent=s.uSubmit;
   document.getElementById('sTitle').textContent=s.sTitle;
